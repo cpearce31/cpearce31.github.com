@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <title>Caleb Pearce - Portfolio</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-btn"><a href="#">About</a></li>
+        <li class="navbar-btn"><a href="#skills">Skills</a></li>
+        <li class="navbar-btn"><a href="#projects">Projects</a></li>
+        <li class="navbar-btn"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="section about">
+      <h2>Caleb Pearce</h2>
+      <h4>Front-end Developer</h4>
+      <img src="headshot.jpg" />
+      <span>Hello, my name is Caleb Pearce, and I'm a self-taught web developer.</span>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <button type="button" class="btn-scroll">down</button>
+    </div>
+    <div class="section skills" id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li class="skill">
+          <i class="skill-icon devicon-html5-plain"></i>
+          <span class="skill-text">HTML 5</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon devicon-css3-plain"></i>
+          <span class="skill-text">CSS</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon devicon-javascript-plain"></i>
+          <span class="skill-text">Javascript</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon devicon-bootstrap-plain"></i>
+          <span class="skill-text">Bootstrap</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon devicon-jquery-plain"></i>
+          <span class="skill-text">JQuery</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon devicon-git-plain"></i>
+          <span class="skill-text">Git</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon devicon-python-plain"></i>
+          <span class="skill-text">Python</span>
+        </li>
+        <li class="skill">
+          <i class="skill-icon"></i>
+          <span class="skill-text">Linux Command Line</span>
+        </li>
+      </ul>
+      <button type="button" class="btn-scroll">down</button>
+    </div>
+    <div class="section projects" id="projects">
+      <h2>Projects</h2>
+      <div class="wrapper-projects">
+        <div class="project">
+          <a class="project-thumbnail">
+            <img src="headshot.jpg"/>
+            <h4>Example Project 1</h4>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="project">
+          <a class="project-thumbnail">
+            <img src="headshot.jpg"/>
+            <h4>Example Project 2</h4>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="project">
+          <a class="project-thumbnail">
+            <img src="headshot.jpg"/>
+            <h4>Example Project 3</h4>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+      <button type="button" class="btn-scroll">down</button>
+    </div>
+    <div class="section contact" id="contact">
+      <h2>Contact</h2>
+      <form class="contact-form" action="https://formspree.io/cpearce31@gmail.com" method="POST">
+        <label>Name</label>
+        <input name="name" placeholder="John Smith" type="text" />
+        <label>Email</label>
+        <input name="email" placeholder="jsmith@somewhere.com" type="text"/>
+        <label>Message</label>
+        <textarea cols="15" rows="10" name="message" placeholder="Your message here"></textarea>
+        <input id="submit" type="submit" value="Send Message" />
+      </form>
+    </div>
+  </div>
+</body>
+</html>
