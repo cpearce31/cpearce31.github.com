@@ -116,16 +116,20 @@
       </button>
     </div>
     <div class="section contact" id="contact">
-      <h2>Contact</h2>
+      <h2 class="contact-head">Contact</h2>
       <form class="contact-form" action="https://formspree.io/cpearce31@gmail.com" method="POST">
-        <label>Name</label>
-        <input name="name" placeholder="John Smith" type="text" />
-        <label>Email</label>
-        <input name="email" placeholder="jsmith@somewhere.com" type="text"/>
-        <label>Message</label>
-        <textarea cols="15" rows="10" name="message" placeholder="Your message here"></textarea>
-        <input id="submit" type="submit" value="Send Message" />
+        <input class="form-field field-short" name="name" placeholder="Name" type="text" />
+        <input class="form-field field-short" name="email" placeholder="Email" type="text"/>
+        <textarea class="form-field form-message" name="message" placeholder="Message"></textarea>
+        <input class="form-submit" id="submit" type="submit" value="Send Message" />
       </form>
+      <div class="contact-links">
+        <a href="https://facebook.com/calebpearce"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+        <a href="https://github.com/cpearce31"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.freecodecamp.com/cpearce31"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+        <a href="http://codepen.io/cpearce31/"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+      </div>
     </div>
   </div>
 </body>

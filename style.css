@@ -58,6 +58,7 @@ body, h2 {
 
 .about-head {
   padding-top: 10vh;
+  max-width: 80vw;
 }
 
 .about-main {
@@ -128,6 +129,10 @@ body, h2 {
   color: white;
 }
 
+.projects {
+  background-color: #e2e2e2;
+}
+
 .projects-head {
   font-size: 2em;
 }
@@ -151,6 +156,7 @@ body, h2 {
   border-radius: 5px;
   font-size: .9em;
   padding: 8px;
+  background-color: #efefef;
 
 }
 
@@ -178,5 +184,70 @@ body, h2 {
 }
 
 .contact {
-  background: blue;
+  background: #0c9;
+  color: white;
+}
+
+.contact-head {
+  font-size: 2em;
+  margin-bottom: -20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+}
+
+.form-field {
+  width: 50vw;
+  outline: none;
+  border: none;
+  margin: 15px 0;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15em;
+}
+
+.form-field:focus{
+  border: 3px solid #f47d42;
+  margin: 12px -3px;
+}
+
+.field-short {
+  height: 25px;
+}
+
+.form-message {
+  flex-grow: 1;
+  resize: none;
+}
+
+.form-submit {
+  margin-top: 10px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #f47d42;
+  color: white;
+  font-size: 1.15em;
+}
+
+.form-submit:hover {
+  background-color: white;
+  color: #f47d42;
+}
+
+.contact-links {
+  height: 10vh;
+  font-size: 3em;
+}
+
+.contact-links > a {
+  color: white;
+  margin: 0 5px;
+}
+
+.contact-links > a:hover {
+  color: #f47d42;
 }
