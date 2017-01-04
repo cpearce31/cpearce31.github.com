@@ -1,13 +1,61 @@
 function main() {
 
+  function resizeResponse() {
+
+    width = window.innerWidth;
+
+    // Move photo in about section next to header
+    if (width < 800) {
+      headWrapper.appendChild(headshot);
+    } else {
+      aboutMain.appendChild(headshot);
+    }
+
+    // Collapse skills into one column
+    if (width <= 900) {
+      for (let i = 0; i < childrenArr.length; i++) {
+        skillsColumn1.appendChild(childrenArr[i]);
+      }
+      if (skills2) {
+        skills2.remove();
+      }
+    } else {
+      skillsWrapper.appendChild(skills2);
+      for (let i = 0; i < childrenArr.length; i++) {
+        skills2.appendChild(childrenArr[i]);
+      }
+    }
+
+    //Show only one project
+    if (width <= 980) {
+      currentCenterProject = 0;
+      for (let i = 0; i < projects.length; i++) {
+        projects[i].style.display = 'none';
+      }
+      projects[0].style.display = 'inline-flex';
+    } else {
+      currentCenterProject = 1;
+      projects[0].style.display = 'inline-flex';
+      projects[1].style.display = 'inline-flex';
+      projects[2].style.display = 'inline-flex';
+    }
+
+  }
+
+  window.addEventListener("resize", resizeThrottler, false);
+
+  let resizeTimeout;
+  function resizeThrottler() {
+    if ( !resizeTimeout ) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        resizeResponse();
+      }, 66);
+    }
+  }
+
   let width = window.innerWidth;
   let height = window.innerHeight;
-
-  if (width < 800) {
-    let headshot = document.getElementById('headshot');
-    let headWrapper = document.getElementById('about-head-wrapper');
-    headWrapper.appendChild(headshot);
-  }
 
   let down1 = document.getElementById('about-down');
   let down2 = document.getElementById('skills-down');
@@ -46,43 +94,30 @@ function main() {
     window.scrollTo(0, 3 * height - 3 * navbarHeight);
   });
 
+  let headshot = document.getElementById('headshot');
+  let headWrapper = document.getElementById('about-head-wrapper');
+  let aboutMain = document.getElementById('about-main');
+
   let skillsColumn1 = document.getElementById('skills1');
   let column2Children = document.getElementById('skills2').children;
   let childrenArr = [].slice.call(column2Children);
-
-  if (width <= 900) {
-    for (let i = 0; i < childrenArr.length; i++) {
-      skillsColumn1.appendChild(childrenArr[i]);
-    }
-    document.getElementById('skills2').remove();
-  }
+  let skills2 = document.getElementById('skills2');
+  let skillsWrapper = document.getElementById('skills-wrapper');
 
   let right = document.getElementById('scroll-right');
   let left = document.getElementById('scroll-left');
   let projects = document.querySelectorAll('#projects-wrapper > div');
-
   let currentCenterProject;
-  if (width <= 980) {
-    currentCenterProject = 0;
-    projects[0].style.display = 'inline-flex';
-  } else {
-    currentCenterProject = 1;
-    projects[0].style.display = 'inline-flex';
-    projects[1].style.display = 'inline-flex';
-    projects[2].style.display = 'inline-flex';
-  }
 
   right.addEventListener('click', () => {
     if (width <= 980 && currentCenterProject !== 5) {
       projects[currentCenterProject].style.display = 'none';
       projects[currentCenterProject + 1].style.display = 'inline-flex';
       currentCenterProject++;
-      console.log(projects[3].style.display);
     } else if (width > 980 && currentCenterProject !== 4) {
       projects[currentCenterProject - 1].style.display = 'none';
       projects[currentCenterProject + 2].style.display = 'inline-flex';
       currentCenterProject++;
-      console.log(currentCenterProject);
     }
   });
   left.addEventListener('click', () => {
@@ -94,10 +129,10 @@ function main() {
       projects[currentCenterProject + 1].style.display = 'none';
       projects[currentCenterProject - 2].style.display = 'inline-flex';
       currentCenterProject--;
-      console.log(currentCenterProject);
     }
   });
 
+  resizeResponse();
 
 }
 
