@@ -39,6 +39,30 @@ body, h2 {
   color: #f47d42;
 }
 
+@media (max-width: 950px) {
+
+  .navbar-btn {
+    font-size: 1.2em;
+    padding: 0px 10px;
+  }
+
+}
+
+@media (max-width: 440px) {
+
+  .navbar {
+    width: 100vw;
+  }
+
+  .navbar-list {
+    justify-content: space-around;
+  }
+
+  .navbar-btn {
+    padding: 0 5px;
+  }
+}
+
 .section {
   height: calc(100vh - 50px);
   display: flex;
@@ -66,7 +90,6 @@ body, h2 {
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  flex-grow: 1.3;
 }
 
 .about-main-img {
@@ -93,6 +116,24 @@ body, h2 {
 
 .btn-scroll:hover{
   color: #f47d42;
+}
+
+@media (max-width: 900px) {
+  .about-head {
+    font-size: 1em;
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .about-main-p {
+    font-size: .9em;
+  }
+
+  .btn-scroll {
+    font-size: 2.5em;
+  }
 }
 
 .skills-head {
@@ -129,6 +170,22 @@ body, h2 {
   color: white;
 }
 
+@media (max-width: 900px) {
+
+  .skills-head {
+    font-size: 2.5em;
+  }
+
+  .skills-wrapper {
+    font-size: 1.3em;
+    height: 70vh;
+  }
+
+  .skill-icon {
+    font-size: 1.3em;
+  }
+}
+
 .projects {
   background-color: #e2e2e2;
 }
@@ -142,6 +199,7 @@ body, h2 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100vw;
 }
 
 .project {
@@ -167,7 +225,6 @@ body, h2 {
 .project-thumbnail {
   display: block;
   max-width: 20vw;
-  max-height: 19vw;
   margin-left: auto;
   margin-right: auto;
   flex-grow: 1.5;
@@ -181,6 +238,47 @@ body, h2 {
 
 .btn-scroll-horiz {
   margin: 0 15px;
+}
+
+@media (max-width: 980px) {
+
+  .wrapper-projects > div {
+    display: none;
+  }
+
+  .wrapper-projects > div:nth-child(2) {
+    display: inline-flex;
+  }
+
+  .project {
+    width: 50vw;
+  }
+
+  .project-thumbnail {
+    max-width: 45vw;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .projects-head {
+    font-size: 1.5em;
+  }
+
+  .project {
+    height: 65vh;
+    width: 60vw;
+  }
+
+  .project-thumbnail {
+    max-width: 58vw;
+  }
+
+  .btn-scroll-horiz {
+    font-size: 1em;
+    margin: 0;
+  }
+
 }
 
 .contact {
@@ -250,4 +348,25 @@ body, h2 {
 
 .contact-links > a:hover {
   color: #f47d42;
+}
+
+@media (max-width: 700px) {
+
+  .contact-form {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .form-field {
+    width: 70vw;
+    margin: 5px 0;
+    padding: 3px;
+    font-size: 1em;
+  }
+
+  .contact-links {
+    font-size: 1.8em;
+  }
 }
