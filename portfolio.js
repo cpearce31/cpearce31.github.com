@@ -31,6 +31,7 @@ function main() {
       currentCenterProject = 0;
       for (let i = 0; i < projects.length; i++) {
         projects[i].style.display = 'none';
+        ticks[i].style.color = 'gray';
       }
       projects[0].style.display = 'inline-flex';
       ticks[0].style.color = '#f47d42';

@@ -1,5 +1,6 @@
 body, h2 {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -317,6 +318,10 @@ body, h2 {
   .btn-scroll-horiz {
     font-size: 1em;
     margin: 0;
+  }
+
+  .projects-scroll-indicator {
+    margin-top: 0;
   }
 
 }
