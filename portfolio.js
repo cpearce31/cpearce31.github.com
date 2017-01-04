@@ -57,32 +57,32 @@ function main() {
     document.getElementById('skills2').remove();
   }
 
-  console.log(document.getElementById('project2').style.visibility + '!!!');
-
   let right = document.getElementById('scroll-right');
   let left = document.getElementById('scroll-left');
-  let projects = document.getElementById('projects-wrapper').children;
-  console.log(projects);
+  let projects = document.querySelectorAll('#projects-wrapper > div');
 
   let currentCenterProject;
   if (width <= 980) {
     currentCenterProject = 0;
+    projects[0].style.display = 'inline-flex';
   } else {
     currentCenterProject = 1;
+    projects[0].style.display = 'inline-flex';
+    projects[1].style.display = 'inline-flex';
+    projects[2].style.display = 'inline-flex';
   }
-
-  console.log(currentCenterProject);
 
   right.addEventListener('click', () => {
     if (width <= 980 && currentCenterProject !== 5) {
-      projects[currentCenterProject].classList.remove("default-hidden");
-      projects[currentCenterProject + 1].classList.add("default-hidden");
+      projects[currentCenterProject].style.display = 'none';
+      projects[currentCenterProject + 1].style.display = 'inline-flex';
       currentCenterProject++;
       console.log(projects[3].style.display);
     } else if (width > 980 && currentCenterProject !== 4) {
       projects[currentCenterProject - 1].style.display = 'none';
       projects[currentCenterProject + 2].style.display = 'inline-flex';
       currentCenterProject++;
+      console.log(currentCenterProject);
     }
   });
   left.addEventListener('click', () => {
@@ -93,7 +93,8 @@ function main() {
     } else if (width > 980 && currentCenterProject !== 1) {
       projects[currentCenterProject + 1].style.display = 'none';
       projects[currentCenterProject - 2].style.display = 'inline-flex';
-      currentCenterProject++;
+      currentCenterProject--;
+      console.log(currentCenterProject);
     }
   });
 

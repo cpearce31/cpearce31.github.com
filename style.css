@@ -100,6 +100,7 @@ body, h2 {
   width: auto;
   height: auto;
   border-radius: 30px;
+  margin-right: 40px;
 }
 
 .about-main-p {
@@ -242,7 +243,7 @@ body, h2 {
 }
 
 .project {
-  display: inline-flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -254,10 +255,6 @@ body, h2 {
   font-size: .9em;
   padding: 8px;
   background-color: #efefef;
-}
-
-.default-hidden {
-  visibility: hidden;;
 }
 
 .project-link {
@@ -283,14 +280,6 @@ body, h2 {
 }
 
 @media (max-width: 980px) {
-
-  .wrapper-projects > div {
-    visibility: hidden;
-  }
-
-  .wrapper-projects > div:nth-child(2) {
-    visibility: visible;
-  }
 
   .project {
     width: 50vw;
