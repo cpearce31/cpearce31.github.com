@@ -33,11 +33,13 @@ function main() {
         projects[i].style.display = 'none';
       }
       projects[0].style.display = 'inline-flex';
+      ticks[0].style.color = '#f47d42';
     } else {
       currentCenterProject = 1;
-      projects[0].style.display = 'inline-flex';
-      projects[1].style.display = 'inline-flex';
-      projects[2].style.display = 'inline-flex';
+      for (let i = 0; i < 3; i++) {
+        projects[i].style.display = 'inline-flex';
+        ticks[i].style.color = '#f47d42';
+      }
     }
 
   }
@@ -107,16 +109,21 @@ function main() {
   let right = document.getElementById('scroll-right');
   let left = document.getElementById('scroll-left');
   let projects = document.querySelectorAll('#projects-wrapper > div');
+  let ticks = document.querySelectorAll('.tick');
   let currentCenterProject;
 
   right.addEventListener('click', () => {
     if (width <= 980 && currentCenterProject !== 5) {
       projects[currentCenterProject].style.display = 'none';
       projects[currentCenterProject + 1].style.display = 'inline-flex';
+      ticks[currentCenterProject].style.color = 'gray';
+      ticks[currentCenterProject + 1].style.color = '#f47d42';
       currentCenterProject++;
     } else if (width > 980 && currentCenterProject !== 4) {
       projects[currentCenterProject - 1].style.display = 'none';
       projects[currentCenterProject + 2].style.display = 'inline-flex';
+      ticks[currentCenterProject - 1].style.color = 'gray';
+      ticks[currentCenterProject + 2].style.color = '#f47d42';
       currentCenterProject++;
     }
   });
@@ -124,10 +131,14 @@ function main() {
     if (width <= 980 && currentCenterProject !== 0) {
       projects[currentCenterProject].style.display = 'none';
       projects[currentCenterProject - 1].style.display = 'inline-flex';
+      ticks[currentCenterProject].style.color = 'gray';
+      ticks[currentCenterProject - 1].style.color = '#f47d42';
       currentCenterProject--;
     } else if (width > 980 && currentCenterProject !== 1) {
       projects[currentCenterProject + 1].style.display = 'none';
       projects[currentCenterProject - 2].style.display = 'inline-flex';
+      ticks[currentCenterProject + 1].style.color = 'gray';
+      ticks[currentCenterProject - 2].style.color = '#f47d42';
       currentCenterProject--;
     }
   });
