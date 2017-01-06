@@ -155,6 +155,7 @@ body, h2 {
     border-radius: 10px;
     max-width: 30vw;
     max-height: 39vw;
+    margin: 0 10px;
   }
 
   .about-head-wrapper {
