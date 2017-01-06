@@ -31,15 +31,14 @@ function main() {
       currentCenterProject = 0;
       for (let i = 0; i < projects.length; i++) {
         projects[i].style.display = 'none';
-        ticks[i].style.color = 'gray';
       }
+      ticks[0].classList.add('tick-active');
       projects[0].style.display = 'inline-flex';
-      ticks[0].style.color = '#f47d42';
     } else {
       currentCenterProject = 1;
       for (let i = 0; i < 3; i++) {
         projects[i].style.display = 'inline-flex';
-        ticks[i].style.color = '#f47d42';
+        ticks[i].classList.add('tick-active');
       }
     }
 
@@ -117,14 +116,14 @@ function main() {
     if (width <= 980 && currentCenterProject !== 5) {
       projects[currentCenterProject].style.display = 'none';
       projects[currentCenterProject + 1].style.display = 'inline-flex';
-      ticks[currentCenterProject].style.color = 'gray';
-      ticks[currentCenterProject + 1].style.color = '#f47d42';
+      ticks[currentCenterProject].classList.toggle('tick-active');
+      ticks[currentCenterProject + 1].classList.toggle('tick-active');
       currentCenterProject++;
     } else if (width > 980 && currentCenterProject !== 4) {
       projects[currentCenterProject - 1].style.display = 'none';
       projects[currentCenterProject + 2].style.display = 'inline-flex';
-      ticks[currentCenterProject - 1].style.color = 'gray';
-      ticks[currentCenterProject + 2].style.color = '#f47d42';
+      ticks[currentCenterProject - 1].classList.toggle('tick-active');
+      ticks[currentCenterProject + 2].classList.toggle('tick-active');
       currentCenterProject++;
     }
   });
@@ -132,14 +131,14 @@ function main() {
     if (width <= 980 && currentCenterProject !== 0) {
       projects[currentCenterProject].style.display = 'none';
       projects[currentCenterProject - 1].style.display = 'inline-flex';
-      ticks[currentCenterProject].style.color = 'gray';
-      ticks[currentCenterProject - 1].style.color = '#f47d42';
+      ticks[currentCenterProject].classList.toggle('tick-active');
+      ticks[currentCenterProject - 1].classList.toggle('tick-active');
       currentCenterProject--;
     } else if (width > 980 && currentCenterProject !== 1) {
       projects[currentCenterProject + 1].style.display = 'none';
       projects[currentCenterProject - 2].style.display = 'inline-flex';
-      ticks[currentCenterProject + 1].style.color = 'gray';
-      ticks[currentCenterProject - 2].style.color = '#f47d42';
+      ticks[currentCenterProject + 1].classList.toggle('tick-active');
+      ticks[currentCenterProject - 2].classList.toggle('tick-active');
       currentCenterProject--;
     }
   });
