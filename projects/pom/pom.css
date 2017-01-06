@@ -1,0 +1,129 @@
+body {
+  background-color: #ff735e;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    heignt: 500px;
+    width: 352px;
+    margin: -250px 0 0 -176px;
+}
+
+@font-face {
+    font-family: pom;
+    src: url(https://www.dl.dropbox.com/s/9ingor6lz5qa0yd/Helvetica.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+}
+
+
+#canTop {
+  width: 350px;
+  height: 30px;
+  background: radial-gradient(silver, grey);
+  border-radius: 165px / 20px;
+  position: relative;
+  border: 1px solid black;
+  z-index: 999;
+}
+
+#canMain {
+  width:350px;
+  height:400px;
+  padding-top: 20px;
+  background: linear-gradient(#fcef00, #fcce00);
+  position: relative;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  top: -15px;
+}
+
+#canBottom {
+  width: 350px;
+  height: 50px;
+  background-color: #fcce00;
+  border-radius: 175px / 25px;
+  position: relative;
+  border: 1px solid black;
+  z-index: -999;
+  top: -40px;
+
+}
+
+#display {
+  display: none;
+}
+
+h1, h3 {
+  display: block;
+  margin: 40px auto 0px auto;
+  text-align: center;
+  font-family: pom;
+}
+
+h1 {
+  color: yellow;
+  width: 200px;
+  font-size: 3em;
+  background-color: red;
+  text-shadow: 3px 3px black;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#tomatoPic img {
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+#prompt, #display {
+  font-family: 'Anonymous Pro', monospace;
+  color: red;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.input {
+  font-family: 'Anonymous Pro', monospace;
+  text-align: center;
+  background: #ffffcc;
+  font-size: 20px;
+  width: 40px;
+  outline: none;
+  border: none;
+  color: red;
+  border-radius: 5px;
+}
+
+.subtext {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+#display .subtext {
+  margin-top: -15px;
+}
+
+#timer {
+  position: absolute;
+  width: 40%;
+  top: 220px;
+  left: 30%;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
