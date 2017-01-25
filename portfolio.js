@@ -110,13 +110,13 @@ function main () {
   let currentCenterProject;
 
   right.addEventListener('click', () => {
-    if (width <= 980 && currentCenterProject !== 5) {
+    if (width <= 980 && currentCenterProject !== 6) {
       projects[currentCenterProject].style.display = 'none';
       projects[currentCenterProject + 1].style.display = 'inline-flex';
       ticks[currentCenterProject].classList.toggle('tick-active');
       ticks[currentCenterProject + 1].classList.toggle('tick-active');
       currentCenterProject++;
-    } else if (width > 980 && currentCenterProject !== 4) {
+    } else if (width > 980 && currentCenterProject !== 5) {
       projects[currentCenterProject - 1].style.display = 'none';
       projects[currentCenterProject + 2].style.display = 'inline-flex';
       ticks[currentCenterProject - 1].classList.toggle('tick-active');
