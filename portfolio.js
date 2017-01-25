@@ -1,7 +1,5 @@
-function main() {
-
-  function resizeResponse() {
-
+function main () {
+  function resizeResponse () {
     width = window.innerWidth;
 
     // Move photo in about section next to header
@@ -26,7 +24,7 @@ function main() {
       }
     }
 
-    //Show only one project
+    // Show only one project
     if (width <= 980) {
       currentCenterProject = 0;
       for (let i = 0; i < projects.length; i++) {
@@ -41,15 +39,14 @@ function main() {
         ticks[i].classList.add('tick-active');
       }
     }
-
   }
 
-  window.addEventListener("resize", resizeThrottler, false);
+  window.addEventListener('resize', resizeThrottler, false);
 
   let resizeTimeout;
-  function resizeThrottler() {
-    if ( !resizeTimeout ) {
-      resizeTimeout = setTimeout(function() {
+  function resizeThrottler () {
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(function () {
         resizeTimeout = null;
         resizeResponse();
       }, 66);
@@ -61,7 +58,7 @@ function main() {
 
   let down1 = document.getElementById('about-down');
   let down2 = document.getElementById('skills-down');
-  let down3= document.getElementById('projects-down');
+  let down3 = document.getElementById('projects-down');
   let navbarHeight = 50;
 
   down1.addEventListener('click', () => {
@@ -144,7 +141,6 @@ function main() {
   });
 
   resizeResponse();
-
 }
 
 window.addEventListener('load', main, false);
