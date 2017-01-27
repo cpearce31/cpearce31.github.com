@@ -79,86 +79,96 @@
     </div>
     <div class="section projects" id="projects">
       <h2 class="projects-head">Projects</h2>
-      <div class="projects-wrapper" id="projects-wrapper">
-        <button type="button" id="scroll-left" class="btn-scroll btn-scroll-horiz left">
-          <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-        </button>
-        <div class="project" id="project7">
-          <a href="projects/life/index.html" class="project-link">
-            <img class="project-thumbnail"src="resources/life.png"/>
-          </a>
-          <h4>React Game-of-Life</h4>
-          <p class="project-p">
-            A React.js implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>, a cellular automaton that simulates the birth and death of single celled organisms.
-          </p>
+      <div class="carousel-container">
+        <div class="carousel-outer-wrapper">
+          <button type="button" id="carousel-btn-left" class="carousel-btn">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+          </button>
+          <div class="carousel-inner-wrapper" id="carousel-wrapper">
+            <div class="carousel-slide carousel-slide-active" id="carousel-slide-1">
+              <a href="projects/life/index.html" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/life.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">React Game-of-Life</h4>
+                <p class="carousel-slide-text">
+                  A React.js implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>, a cellular automaton that simulates the birth and death of single celled organisms.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-slide carousel-slide-right" id="carousel-slide-2">
+              <a href="projects/calc/calc.htm" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/calc.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">Javascript Calculator</h4>
+                <p class="carousel-slide-text">
+                  A calculator capable of evaluating multi-step expressions. Uses Javascript for expression parsing and jQuery for DOM manipulation.          </p>
+              </div>
+            </div>
+            <div class="carousel-slide carousel-slide-right" id="carousel-slide-3">
+              <a href="projects/tic/tic.htm" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/tic.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">Noughts and Crosses</h4>
+                <p class="carousel-slide-text">
+                  A simple Tic Tac Toe game that allows you to play against a friend or the computer.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-slide carousel-slide-right" id="carousel-slide-4">
+              <a href="https://github.com/cpearce31/slideshow" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/slides.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">Responsive Slideshow</h4>
+                <p class="carousel-slide-text">
+                  A modular version of the slide carousel seen here, ready for use on your website. Features optional autoscrolling and full responsiveness. Made from scratch with plain Javascript.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-slide carousel-slide-right" id="carousel-slide-5">
+              <a href="projects/lines/lines.htm" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/lines.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">Opening Lines of Literature</h4>
+                <p class="carousel-slide-text">
+                  Gets opening lines of famous novels from the WikiQuote API with an AJAX request, then displays a random quote.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-slide carousel-slide-right" id="carousel-slide-6">
+              <a href="projects/wiki/wiki.htm" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/wiki.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">Wikipedia Search Viewer</h4>
+                <p class="carousel-slide-text">
+                  Replicates Wikipedia's search functionality, made to practice getting and displaying data from an API.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-slide carousel-slide-right" id="carousel-slide-7">
+              <a href="projects/pom/pom.htm" class="carousel-slide-link">
+                <img class="carousel-slide-img" src="resources/pom.png"/>
+              </a>
+              <div class="carousel-slide-text-wrapper">
+                <h4 class="carousel-slide-header">Pomodoro Timer</h4>
+                <p class="carousel-slide-text">
+                  A timer for the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro time management</a> technique, allowing you to adjust the length of work and rest periods.
+                </p>
+              </div>
+            </div>
+          </div>
+            <button type="button" id="carousel-btn-right" class="carousel-btn">
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        <div class="carousel-scroll-indicator" id="carousel-scroll-indicator">
         </div>
-        <div class="project" id="project1">
-          <a href="projects/calc/calc.htm" class="project-link">
-            <img class="project-thumbnail"src="resources/calc.png"/>
-          </a>
-          <h4>Javascript Calculator</h4>
-          <p class="project-p">
-            A calculator capable of evaluating multi-step expressions. Uses Javascript for expression parsing and jQuery for DOM manipulation.
-          </p>
-        </div>
-        <div class="project" id="project2">
-          <a href="projects/tic/tic.htm" class="project-link">
-            <img class="project-thumbnail" src="resources/tic.png"/>
-          </a>
-          <h4>Noughts and Crosses</h4>
-          <p class="project-p">
-            A simple Tic Tac Toe game that allows you to play against a friend or the computer.
-          </p>
-        </div>
-        <div class="project" id="project3">
-          <a href="projects/weather/weather.htm" class="project-link">
-            <img class="project-thumbnail" src="resources/weather.png"/>
-          </a>
-          <h4>Weather App</h4>
-          <p class="project-p">
-            A single-page weather application that gets your location through an IP lookup and then gets relevant weather data via an AJAX request to the Open Weather Map API.
-          </p>
-        </div>
-        <div class="project" id="project4">
-          <a href="projects/lines/lines.htm" class="project-link">
-            <img class="project-thumbnail"src="resources/lines.png"/>
-          </a>
-          <h4>Opening Lines of Literature</h4>
-          <p class="project-p">
-              Gets opening lines of famous novels from the WikiQuote API with an AJAX request, then displays a random quote.
-          </p>
-        </div>
-        <div class="project" id="project5">
-          <a href="projects/wiki/wiki.htm" class="project-link">
-            <img class="project-thumbnail"src="resources/wiki.png"/>
-          </a>
-          <h4>Wikipedia Search Tool</h4>
-          <p class="project-p">
-            Replicates Wikipedia's search functionality, made to practice getting and displaying data from an API.
-          </p>
-        </div>
-        <div class="project" id="project6">
-          <a href="projects/pom/pom.htm" class="project-link">
-            <img class="project-thumbnail"src="resources/pom.png"/>
-          </a>
-          <h4>Pomodoro Timer</h4>
-          <p class="project-p">
-            A timer for the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro time management</a> technique, allowing you to adjust the length of work and rest periods.
-          </p>
-        </div>
-        <button type="button" id="scroll-right" class="btn-scroll btn-scroll-horiz right">
-          <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-        </button>
       </div>
-      <p class="projects-scroll-indicator" id="scroll-indicator">
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-        <i class="fa fa-square tick" aria-hidden="true"></i>
-      </p>
       <button type="button" class="btn-scroll" id="projects-down">
         <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
       </button>
