@@ -44,15 +44,21 @@ function main () {
   let down2 = document.getElementById('skills-down');
   let down3 = document.getElementById('projects-down');
   let navbarHeight = 50;
+  let sectionHeights = {
+    about: 0,
+    skills: height - navbarHeight,
+    projects: 2 * height - 2 * navbarHeight,
+    contact: 3 * height - 3 * navbarHeight
+  };
 
   down1.addEventListener('click', () => {
-    window.scrollTo(0, height - navbarHeight);
+    window.scrollTo(0, sectionHeights.skills);
   });
   down2.addEventListener('click', () => {
-    window.scrollTo(0, 2 * height - 2 * navbarHeight);
+    window.scrollTo(0, sectionHeights.projects);
   });
   down3.addEventListener('click', () => {
-    window.scrollTo(0, 3 * height - 3 * navbarHeight);
+    window.scrollTo(0, sectionHeights.contact);
   });
 
   let aboutLink = document.getElementById('nav-about');
@@ -62,19 +68,19 @@ function main () {
 
   aboutLink.addEventListener('click', () => {
     event.preventDefault();
-    window.scrollTo(0, 0);
+    window.scrollTo(0, sectionHeights.about);
   });
   skillsLink.addEventListener('click', () => {
     event.preventDefault();
-    window.scrollTo(0, height - navbarHeight);
+    window.scrollTo(0, sectionHeights.skills);
   });
   projectsLink.addEventListener('click', () => {
     event.preventDefault();
-    window.scrollTo(0, 2 * height - 2 * navbarHeight);
+    window.scrollTo(0, sectionHeights.projects);
   });
   contactLink.addEventListener('click', () => {
     event.preventDefault();
-    window.scrollTo(0, 3 * height - 3 * navbarHeight);
+    window.scrollTo(0, sectionHeights.contact);
   });
 
   let headshot = document.getElementById('headshot');
@@ -104,7 +110,7 @@ function main () {
   var indicator = document.querySelector('#carousel-scroll-indicator');
   var wrapper = document.querySelector('#carousel-wrapper');
 
-  // Add bulvars to the scoll indicator section for each slide
+  // Add bullets to the scoll indicator section for each slide
   for (var i = 0; i < slides.length; i++) {
     var pip = document.createElement('i');
     pip.className = 'carousel-pip fa fa-square';
@@ -201,6 +207,33 @@ function main () {
 
   var interval;
   startAutoScroll();
+
+  let navs = document.querySelectorAll('.navbar-btn');
+
+  function navReset () {
+    for (let i = 0; i < navs.length; i++) {
+      navs[i].className = 'navbar-btn';
+    }
+  }
+
+  window.addEventListener('scroll', function () {
+    let offset = height * 0.4;
+    let y = document.body.scrollTop;
+    if (y < sectionHeights.skills - offset) {
+      navReset();
+      navs[0].classList.toggle('navbar-btn-active');
+    } else if (y < sectionHeights.projects - offset) {
+      navReset();
+      navs[1].classList.toggle('navbar-btn-active');
+      console.log(navs);
+    } else if (y < sectionHeights.contact - offset) {
+      navReset();
+      navs[2].classList.toggle('navbar-btn-active');
+    } else {
+      navReset();
+      navs[3].classList.toggle('navbar-btn-active');
+    }
+  });
 }
 
 window.addEventListener('load', main, false);

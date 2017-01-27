@@ -8,6 +8,7 @@ body, h2 {
 }
 
 .navbar {
+  font-family: "Raleway", sans-serif;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -27,13 +28,34 @@ body, h2 {
 
 .navbar-btn {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.8em;
   padding: 5px 15px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  animation: btn-active 0.5s infinite;
+  -webkit-animation:btn-active 0.5s infinite;
+}
+
+.navbar-btn-active {
+  background-color: #e2e2e2;
+  color: #0c9;
 }
 
 .navbar-link, .navbar-link:visited {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
+}
+
+@keyframes btn-active {
+  0%: {width: default};
+  100% {width: 250px};
+}
+
+@-webkit-keyframes btn-active {
+  0%: {width: default};
+  100% {width: 250px};
 }
 
 .navbar-link:hover{
@@ -229,17 +251,6 @@ body, h2 {
 
 .projects {
   background-color: #e2e2e2;
-}
-
-.projects-head {
-  font-size: 2em;
-}
-
-@media (max-width: 440px) {
-
-  .projects-head {
-    font-size: 1.5em;
-  }
 }
 
 .contact {
