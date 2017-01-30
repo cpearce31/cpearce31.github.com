@@ -1,4 +1,4 @@
-function main () {
+window.onload = function () {
   function resizeResponse () {
     width = window.innerWidth;
 
@@ -233,6 +233,4 @@ function main () {
       navs[3].classList.toggle('navbar-btn-active');
     }
   });
-}
-
-window.addEventListener('load', main, false);
+};
