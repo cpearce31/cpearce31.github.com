@@ -225,7 +225,6 @@ function main () {
     } else if (y < sectionHeights.projects - offset) {
       navReset();
       navs[1].classList.toggle('navbar-btn-active');
-      console.log(navs);
     } else if (y < sectionHeights.contact - offset) {
       navReset();
       navs[2].classList.toggle('navbar-btn-active');
