@@ -1,7 +1,13 @@
-alert('asdasdf');
+if (
+    document.readyState === 'complete' ||
+    (document.readyState !== 'loading' && !document.documentElement.doScroll)
+) {
+  main();
+} else {
+  document.addEventListener('DOMContentLoaded', main);
+}
 
-window.onload = function () {
-  alert('onload fired');
+var main = function () {
   function resizeResponse () {
     width = window.innerWidth;
 
