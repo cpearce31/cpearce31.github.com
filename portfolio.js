@@ -8,7 +8,7 @@ if (
   document.addEventListener('DOMContentLoaded', main);
 }
 
-var main = function () {
+function main () {
   function resizeResponse () {
     width = window.innerWidth;
 
