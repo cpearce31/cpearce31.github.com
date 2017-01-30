@@ -1,4 +1,3 @@
-
 if (
     document.readyState === 'complete' ||
     (document.readyState !== 'loading' && !document.documentElement.doScroll)
@@ -21,7 +20,7 @@ function main () {
 
     // Collapse skills into one column
     if (width <= 900) {
-      for (let i = 0; i < childrenArr.length; i++) {
+      for (var i = 0; i < childrenArr.length; i++) {
         skillsColumn1.appendChild(childrenArr[i]);
       }
       if (skills2) {
@@ -29,7 +28,7 @@ function main () {
       }
     } else {
       skillsWrapper.appendChild(skills2);
-      for (let i = 0; i < childrenArr.length; i++) {
+      for (i = 0; i < childrenArr.length; i++) {
         skills2.appendChild(childrenArr[i]);
       }
     }
@@ -37,7 +36,7 @@ function main () {
 
   window.addEventListener('resize', resizeThrottler, false);
 
-  let resizeTimeout;
+  var resizeTimeout;
   function resizeThrottler () {
     if (!resizeTimeout) {
       resizeTimeout = setTimeout(function () {
@@ -47,61 +46,61 @@ function main () {
     }
   }
 
-  let width = window.innerWidth;
-  let height = window.innerHeight;
+  var width = window.innerWidth;
+  var height = window.innerHeight;
 
-  let down1 = document.getElementById('about-down');
-  let down2 = document.getElementById('skills-down');
-  let down3 = document.getElementById('projects-down');
-  let navbarHeight = 50;
-  let sectionHeights = {
+  var down1 = document.getElementById('about-down');
+  var down2 = document.getElementById('skills-down');
+  var down3 = document.getElementById('projects-down');
+  var navbarHeight = 50;
+  var sectionHeights = {
     about: 0,
     skills: height - navbarHeight,
     projects: 2 * height - 2 * navbarHeight,
     contact: 3 * height - 3 * navbarHeight
   };
 
-  down1.addEventListener('click', () => {
+  down1.addEventListener('click', function () {
     window.scrollTo(0, sectionHeights.skills);
   });
-  down2.addEventListener('click', () => {
+  down2.addEventListener('click', function () {
     window.scrollTo(0, sectionHeights.projects);
   });
-  down3.addEventListener('click', () => {
+  down3.addEventListener('click', function () {
     window.scrollTo(0, sectionHeights.contact);
   });
 
-  let aboutLink = document.getElementById('nav-about');
-  let skillsLink = document.getElementById('nav-skills');
-  let projectsLink = document.getElementById('nav-projects');
-  let contactLink = document.getElementById('nav-contact');
+  var aboutLink = document.getElementById('nav-about');
+  var skillsLink = document.getElementById('nav-skills');
+  var projectsLink = document.getElementById('nav-projects');
+  var contactLink = document.getElementById('nav-contact');
 
-  aboutLink.addEventListener('click', () => {
+  aboutLink.addEventListener('click', function () {
     event.preventDefault();
     window.scrollTo(0, sectionHeights.about);
   });
-  skillsLink.addEventListener('click', () => {
+  skillsLink.addEventListener('click', function () {
     event.preventDefault();
     window.scrollTo(0, sectionHeights.skills);
   });
-  projectsLink.addEventListener('click', () => {
+  projectsLink.addEventListener('click', function () {
     event.preventDefault();
     window.scrollTo(0, sectionHeights.projects);
   });
-  contactLink.addEventListener('click', () => {
+  contactLink.addEventListener('click', function () {
     event.preventDefault();
     window.scrollTo(0, sectionHeights.contact);
   });
 
-  let headshot = document.getElementById('headshot');
-  let headWrapper = document.getElementById('about-head-wrapper');
-  let aboutMain = document.getElementById('about-main');
+  var headshot = document.getElementById('headshot');
+  var headWrapper = document.getElementById('about-head-wrapper');
+  var aboutMain = document.getElementById('about-main');
 
-  let skillsColumn1 = document.getElementById('skills1');
-  let column2Children = document.getElementById('skills2').children;
-  let childrenArr = [].slice.call(column2Children);
-  let skills2 = document.getElementById('skills2');
-  let skillsWrapper = document.getElementById('skills-wrapper');
+  var skillsColumn1 = document.getElementById('skills1');
+  var column2Children = document.getElementById('skills2').children;
+  var childrenArr = [].slice.call(column2Children);
+  var skills2 = document.getElementById('skills2');
+  var skillsWrapper = document.getElementById('skills-wrapper');
 
   resizeResponse();
 
@@ -218,17 +217,17 @@ function main () {
   var interval;
   startAutoScroll();
 
-  let navs = document.querySelectorAll('.navbar-btn');
+  var navs = document.querySelectorAll('.navbar-btn');
 
   function navReset () {
-    for (let i = 0; i < navs.length; i++) {
+    for (var i = 0; i < navs.length; i++) {
       navs[i].className = 'navbar-btn';
     }
   }
 
   window.addEventListener('scroll', function () {
-    let offset = height * 0.4;
-    let y = document.body.scrollTop;
+    var offset = height * 0.4;
+    var y = document.body.scrollTop;
     if (y < sectionHeights.skills - offset) {
       navReset();
       navs[0].classList.toggle('navbar-btn-active');
