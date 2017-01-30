@@ -34,8 +34,6 @@ body, h2 {
   display: flex;
   align-items: center;
   color: #fff;
-  animation: btn-active 0.5s infinite;
-  -webkit-animation:btn-active 0.5s infinite;
 }
 
 .navbar-btn-active {
@@ -46,16 +44,6 @@ body, h2 {
 .navbar-link, .navbar-link:visited {
   text-decoration: none;
   color: inherit;
-}
-
-@keyframes btn-active {
-  0%: {width: default};
-  100% {width: 250px};
-}
-
-@-webkit-keyframes btn-active {
-  0%: {width: default};
-  100% {width: 250px};
 }
 
 .navbar-link:hover{
