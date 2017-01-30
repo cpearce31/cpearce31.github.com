@@ -1,3 +1,5 @@
+alert('asdasdf');
+
 window.onload = function () {
   alert('onload fired');
   function resizeResponse () {
