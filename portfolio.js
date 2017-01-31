@@ -56,20 +56,6 @@ function main() {
     sections[i].style.height = sectionHeight + 'px';
   }
 
-  var down1 = document.getElementById('about-down');
-  var down2 = document.getElementById('skills-down');
-  var down3 = document.getElementById('projects-down');
-
-  down1.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeight);
-  });
-  down2.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeight * 2);
-  });
-  down3.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeight * 3);
-  });
-
   var aboutLink = document.getElementById('nav-about');
   var skillsLink = document.getElementById('nav-skills');
   var projectsLink = document.getElementById('nav-projects');
