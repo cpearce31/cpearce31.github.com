@@ -34,11 +34,20 @@ body, h2 {
   display: flex;
   align-items: center;
   color: #fff;
+  transition: padding 0.2s linear;
+  transition: letter-spacing 0.3s linear;
 }
 
 .navbar-btn-active {
   background-color: #e2e2e2;
   color: #0c9;
+}
+
+@media (min-width: 440px) {
+  .navbar-btn-active {
+    padding: 5px 90px;
+    letter-spacing: 6px;
+  }
 }
 
 .navbar-link, .navbar-link:visited {
