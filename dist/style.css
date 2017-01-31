@@ -1,4 +1,4 @@
-body, h2 {
+body, html{
   margin: 0;
   overflow-x: hidden;
 }
@@ -81,6 +81,12 @@ body, h2 {
 
   .navbar-btn {
     padding: 0 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navbar-btn {
+    font-size: 1em;
   }
 }
 
@@ -571,7 +577,8 @@ body, h2 {
   }
 
   .carousel-btn {
-    margin: 5px;
+    padding: 0;
+    margin: 10px;
     font-size: 1.7em;
   }
 }
