@@ -114,20 +114,6 @@ body, h2 {
   width: 50vw;
 }
 
-.btn-scroll {
-  border: none;
-  background: inherit;
-  font-size: 4em;
-  outline: none;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 800px) {
-  .btn-scroll {
-    display: none;
-  }
-}
-
 .btn-scroll:hover{
   color: #f47d42;
 }

@@ -54,20 +54,6 @@ function main () {
     sections[i].style.height = sectionHeight + 'px';
   }
 
-  let down1 = document.getElementById('about-down');
-  let down2 = document.getElementById('skills-down');
-  let down3 = document.getElementById('projects-down');
-
-  down1.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeight);
-  });
-  down2.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeight * 2);
-  });
-  down3.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeight * 3);
-  });
-
   let aboutLink = document.getElementById('nav-about');
   let skillsLink = document.getElementById('nav-skills');
   let projectsLink = document.getElementById('nav-projects');
