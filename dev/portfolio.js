@@ -1,11 +1,4 @@
-if (
-    document.readyState === 'complete' ||
-    (document.readyState !== 'loading' && !document.documentElement.doScroll)
-) {
-  main();
-} else {
-  document.addEventListener('DOMContentLoaded', main);
-}
+window.onload = main;
 
 function main () {
   function resizeResponse () {
@@ -19,9 +12,9 @@ function main () {
     }
 
     // Collapse skills into one column
-    if (width <= 900) {
+    if (width <= 900 && height > width) {
       for (let i = 0; i < childrenArr.length; i++) {
-        skillsColumn1.appendChild(childrenArr[i]);
+        skills1.appendChild(childrenArr[i]);
       }
       if (skills2) {
         skills2.remove();
@@ -48,26 +41,31 @@ function main () {
 
   let width = window.innerWidth;
   let height = window.innerHeight;
+  let sections = document.querySelectorAll('.section');
+  let navbarHeight = 50;
+  let sectionHeight = height - navbarHeight;
+
+  // Set height of each section to the full height of the viewport
+  // unless on a small device in portrait mode
+  if (sectionHeight < 500 && width > height) {
+    sectionHeight = sectionHeight * 2;
+  }
+  for (let i = 0; i < sections.length; i++) {
+    sections[i].style.height = sectionHeight + 'px';
+  }
 
   let down1 = document.getElementById('about-down');
   let down2 = document.getElementById('skills-down');
   let down3 = document.getElementById('projects-down');
-  let navbarHeight = 50;
-  let sectionHeights = {
-    about: 0,
-    skills: height - navbarHeight,
-    projects: 2 * height - 2 * navbarHeight,
-    contact: 3 * height - 3 * navbarHeight
-  };
 
   down1.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeights.skills);
+    window.scrollTo(0, sectionHeight);
   });
   down2.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeights.projects);
+    window.scrollTo(0, sectionHeight * 2);
   });
   down3.addEventListener('click', function () {
-    window.scrollTo(0, sectionHeights.contact);
+    window.scrollTo(0, sectionHeight * 3);
   });
 
   let aboutLink = document.getElementById('nav-about');
@@ -77,26 +75,26 @@ function main () {
 
   aboutLink.addEventListener('click', function () {
     event.preventDefault();
-    window.scrollTo(0, sectionHeights.about);
+    window.scrollTo(0, 0);
   });
   skillsLink.addEventListener('click', function () {
     event.preventDefault();
-    window.scrollTo(0, sectionHeights.skills);
+    window.scrollTo(0, sectionHeight);
   });
   projectsLink.addEventListener('click', function () {
     event.preventDefault();
-    window.scrollTo(0, sectionHeights.projects);
+    window.scrollTo(0, sectionHeight * 2);
   });
   contactLink.addEventListener('click', function () {
     event.preventDefault();
-    window.scrollTo(0, sectionHeights.contact);
+    window.scrollTo(0, sectionHeight * 3);
   });
 
   let headshot = document.getElementById('headshot');
   let headWrapper = document.getElementById('about-head-wrapper');
   let aboutMain = document.getElementById('about-main');
 
-  let skillsColumn1 = document.getElementById('skills1');
+  let skills1 = document.getElementById('skills1');
   let column2Children = document.getElementById('skills2').children;
   let childrenArr = [].slice.call(column2Children);
   let skills2 = document.getElementById('skills2');
@@ -228,13 +226,13 @@ function main () {
   window.addEventListener('scroll', function () {
     let offset = height * 0.4;
     let y = document.body.scrollTop;
-    if (y < sectionHeights.skills - offset) {
+    if (y < sectionHeight - offset) {
       navReset();
       navs[0].classList.toggle('navbar-btn-active');
-    } else if (y < sectionHeights.projects - offset) {
+    } else if (y < sectionHeight * 2 - offset) {
       navReset();
       navs[1].classList.toggle('navbar-btn-active');
-    } else if (y < sectionHeights.contact - offset) {
+    } else if (y < sectionHeight * 3 - offset) {
       navReset();
       navs[2].classList.toggle('navbar-btn-active');
     } else {
