@@ -1,0 +1,127 @@
+body {
+    background: #70b4d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    margin-bottom: 100px;
+    font-family: 'Shrikhand', cursive;
+    font-size: 4em;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    font-family: 'Open Sans', sans-serif;
+    border: 10px solid white;
+    border-radius: 20px;
+    background-color: #b6dced;
+    width: 500px;
+    height: 400px;
+}
+
+#options {
+    font-family: 'Open Sans', sans-serif;
+    color: #0144af;
+}
+
+#players, #symbol {
+    display: block;
+    width: 200px;
+    height: 225px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+    font-size: 1.5em;
+}
+
+#symbol{
+    visibility: hidden;
+}
+
+#game {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+}
+
+.btn {
+    display: block;
+    background-color: #236ce0;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 300px;
+    margin: 30px auto;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: inline-block;
+    vertical-align: top;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 3.1em;
+    color: #236ce0;
+    margin: 0px -2px;
+}
+
+.box.top {
+    border-bottom: 4px solid white;
+}
+
+.box.y-mid {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.box.bottom {
+    border-top: 4px solid white;
+}
+
+.box.left {
+    border-right: 4px solid white;
+}
+
+.box.x-mid {
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    margin-left: -3px;
+}
+
+.box.right {
+    border-left: 4px solid white;
+}
+
+#message {
+    padding-top: 10px;
+    height: 70px;
+    font-size: 2em;
+    color: #236ce0;
+    text-align: center;
+}
+
+footer {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Open Sans',sans-serif;
+}

@@ -1,0 +1,44 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+ 
+  <link href="weather.css" rel="stylesheet" type="text/css" />
+  <script src="weather.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="weatherBox">
+    <header class="yourCity">
+      Checking location...
+    </header>
+    <div class="unitsRadio">
+      <label class="radio">
+        <input type="radio" name="units" checked = "checked" value="1" id="imperial">
+        Imperial
+      </label>
+      <label class="radio">
+        <input type="radio" name="units" value="2" id="metric">
+        Metric
+      </label>
+    </div>
+    <div class="weatherRow top">
+      <p class="weatherInfo  temp">
+      67&deg;F
+    </p>
+      <figure class="weatherInfo icon">
+      <img id=wIcon src="#">
+    </figure>
+    </div>
+    <div class="weatherRow bottom">
+      <p class="weatherInfo wind">
+      Wind: 12mph
+    </p>
+      <p class="weatherInfo humidity">
+      Humidity: 28%
+    </p>
+    </div>
+  </div>
+</body>

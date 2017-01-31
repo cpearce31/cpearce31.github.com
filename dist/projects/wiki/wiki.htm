@@ -1,0 +1,35 @@
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Poppins:400,600,700' rel='stylesheet' type='text/css'>
+  <link href="wiki.css" rel="stylesheet" type="text/css" />
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="wiki.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="splash" id="splash">
+    A prettier way to search Wikipedia.
+  </header>
+    <div class="search" id="search">
+      <span class="searchPrompt">
+        Search for
+      </span>
+    <div class="search searchForm">
+      <input class="searchBox" id="searchBox" type="text" name="search" placeholder="what?" value="">
+      <button class="searchButton" id="searchButton" value="" >
+    </form>
+  </div>
+    <div class="randomBox" id="randomBox">
+    <a class="expandLink" href="https://en.wikipedia.org/wiki/Special:Random">
+    Give me a random article instead.
+    </a>
+  </div>
+  </div>
+  <div class="resultContainer" id="resultContainer">
+    <header id="resultHead"> Your results: </header>
+    <footer id="resultFoot"><a href="" class="expandLink">Search again?</footer>
+  </div>
+</body>

@@ -1,0 +1,118 @@
+body {
+  font-family: 'arvo', serif;
+  justify: center;
+  margin: 100px 25% 100px 25%;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.quoteHeader {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+}
+
+.quoteBox {
+  margin-top: 30px;
+  padding: 20px 20px 0 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #99F8FF;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 350px;
+  position: relative;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#quote {
+  display: block;
+  max-height: 180px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  overflow-y: auto;
+}
+
+#title {
+  font-style: italic;
+  color: #000066;
+  font-size: 120%;
+  margin: 0 3px;
+}
+
+#author {
+  color: #000066;
+  font-size: 120%;
+  margin-left: 3px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+  border: 2px solid black; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  font-family: 'arvo', serif;
+}
+
+button:hover {
+    background-color: #E8E8E8;
+}
+
+footer {
+  text-align: right;
+  font-size: 14px;
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    margin: 30px 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  #quote {
+    font-size: 15px;
+  }
+
+  .quoteHeader {
+    font-size: 16px;
+  }
+
+  .quoteBox {
+    min-height: 375px !important;
+  }
+
+  #quote {
+    max-height: 50px;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+  }
+}

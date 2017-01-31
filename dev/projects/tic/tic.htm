@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link href="tic.css" rel="stylesheet" />
+    <script src="tic.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        Noughts &amp; Crosses
+    </header>
+    <div class="container">
+        <div id="options">
+            <form action="" id="players">
+                <p class="optionText">
+                    Play against:
+                </p>
+                <input type="radio" name="players" value="2" checked="checked">A friend<br>
+                <input type="radio" name="players" value="1">The computer<br>
+            </form>
+            <form action="" id="symbol">
+                <p class="optionText">
+                    Play as:
+                </p>
+                <input class="symbolRadio" type="radio" name="symbol" value="X" checked="checked">X<br>
+                <input class="symbolRadio" type="radio" name="symbol" value="O">O<br>
+            </form>
+            <button class='btn' id="start">Go</button>
+        </div>
+        <div id="game">
+            <div id="message">
+                X's move.
+            </div>
+            <div class="board">
+                <div class="row" id="row0">
+                    <span class="box top left" id="box0-0"></span>
+                    <span class="box top x-mid" id="box0-1"></span>
+                    <span class="box top right" id="box0-2"></span>
+                </div>
+                <div class="row" id="row1">
+                    <span class="box y-mid left" id="box1-0"></span>
+                    <span class="box y-mid x-mid" id="box1-1"></span>
+                    <span class="box y-mid right" id="box1-2"></span>
+                </div>
+                <div class="row" id="row2">
+                    <span class="box bottom left" id="box2-0"></span>
+                    <span class="box bottom x-mid" id="box2-1"></span>
+                    <span class="box bottom right" id="box2-2"></span>
+                </div>
+            </div>
+            <button class='btn' id="reset">Reset</button>
+        </div>
+    </div>
+    <footer>
+        Designed and coded by Caleb Pearce.
+    </footer>
+</body>
+
+</html>
