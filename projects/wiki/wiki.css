@@ -87,6 +87,7 @@ input:focus {
   border-left: 20px solid #333333;
   font-size: .5em;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #resultHead {

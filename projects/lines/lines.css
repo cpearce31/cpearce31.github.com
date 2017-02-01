@@ -111,8 +111,11 @@ footer {
   }
 
   #quote {
-    max-height: 50px;
-    -webkit-overflow-scrolling: touch;
-    overflow: hidden;
+    max-height: 150px;
+    overflow: auto;
+  }
+
+  footer {
+    display: none;
   }
 }
