@@ -208,7 +208,7 @@ body, h2 {
 .about-main-img {
   display: block;
   max-height: 260px;
-  max-width: 200;
+  max-width: 200px;
   width: auto;
   height: auto;
   border-radius: 30px;
@@ -271,13 +271,22 @@ body, h2 {
 }
 
 @media (max-width: 440px) {
+
+  .card-1 {
+    height: 10vh;
+  }
+
+  .card-3 {
+    height: 30vh;
+  }
+
   .about-card {
     font-size: .7em;
   }
   .about-main-img {
     border-radius: 10px;
-    max-width: 30vw;
-    max-height: 39vw;
+    width: 100px;
+    height: 100px;
     margin: 0 10px;
   }
 
@@ -379,6 +388,7 @@ body, h2 {
   width: 50vw;
   outline: none;
   border: none;
+  border-radius: 0;
   margin: 15px 0;
   padding: 10px;
   font-family: "Roboto", sans-serif;
@@ -667,8 +677,9 @@ body, h2 {
   }
 
   .carousel-btn {
-    margin: 5px;
+    margin: 10px;
     font-size: 1.7em;
+    padding: 0;
   }
 }
 
@@ -699,10 +710,9 @@ body, h2 {
   }
 
   .carousel-btn {
-    margin: 3px;
+    margin: 5px;
     font-size: 1.6em;
-    transform: scale(1, 2);
-    padding: 3px;
+    padding: 0;
   }
 }
 
