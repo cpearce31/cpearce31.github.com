@@ -135,3 +135,40 @@ footer {
     margin-top: 10px;
     font-family: 'Open Sans',sans-serif;
 }
+
+@media (max-width: 610px) {
+
+    header {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .container {
+        width: 300px;
+        height: 350px;
+    }
+
+    .btn {
+        width: 200px;
+        font-size: 1rem;
+        height: 30px;
+    }
+
+    #symbol, #players {
+        float: none;
+        padding: 0;
+        height: 100px;
+        margin: 20px;
+    }
+
+    #start {
+        margin-top: 30px;
+    }
+
+    #message {
+        font-size: 1em;
+        padding: 0;
+        height: 30px;
+        margin: 10px 0;
+    }
+}

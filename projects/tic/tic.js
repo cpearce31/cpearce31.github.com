@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  reset = document.getElementById('reset');
+  var reset = document.getElementById('reset');
   reset.addEventListener('click', function () {
     board.reset();
     options.style.display = 'block';
