@@ -1,10 +1,10 @@
-body, html{
+body, h2 {
   margin: 0;
   overflow-x: hidden;
 }
 
 .container {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar {
@@ -38,13 +38,13 @@ body, html{
   -ms-flex-align: center;
   align-items: center;
   color: #fff;
-  transition: padding 0.2s linear;
-  transition: letter-spacing 0.3s linear;
 }
 
 .navbar-btn-active {
   background-color: #e2e2e2;
   color: #0c9;
+  transition: padding .2s linear;
+  transition: letter-spacing .2s linear;
 }
 
 @media (min-width: 440px) {
@@ -81,12 +81,6 @@ body, html{
 
   .navbar-btn {
     padding: 0 5px;
-  }
-}
-
-@media (max-width: 350px) {
-  .navbar-btn {
-    font-size: 1em;
   }
 }
 
@@ -291,7 +285,7 @@ body, html{
   border: none;
   margin: 15px 0;
   padding: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.15em;
 }
 
@@ -421,7 +415,7 @@ body, html{
   justify-content: space-around;
   height: 125px;
   width: 745px;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #444;
 }
 
@@ -577,8 +571,7 @@ body, html{
   }
 
   .carousel-btn {
-    padding: 0;
-    margin: 10px;
+    margin: 5px;
     font-size: 1.7em;
   }
 }

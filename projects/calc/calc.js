@@ -1,11 +1,10 @@
 'use strict';
 
 $(document).ready(function () {
-
-  //formats and displays the current expression to be evaluated
+  //  formats and displays the current expression to be evaluated
   function printInput(input) {
     var re = /[\d|.]/;
-    var str = "";
+    var str = '';
 
     if (input.length === 0) {
       $('#input').text('');
@@ -20,69 +19,73 @@ $(document).ready(function () {
     $('#input').text(str);
   }
 
-  //initialize globals for later use
+  // initialize globals for later use
   var inputArr = [];
   var resetFlag = false;
 
-  //displays and stores operators and numbers when their button is pressed
-  $(".expression").click(function () {
-    //handles entries that follow a "=" press
-    var numRe = /[\d.\(\)]/;
-    var opRe = /[\/\*\+\-\^]/;
+  // displays and stores operators and numbers when their button is pressed
+  $('.expression').click(function () {
+    // handles entries that follow a "=" press
+    var opRe = /[/*+\-^]/;
     var pressed = $(event.target).text();
-    //if "=" is followed by an operator, apply it to the previous output
+    // if "=" is followed by an operator, apply it to the previous output
     if (resetFlag && opRe.test(pressed)) {
-      inputArr = [$("#output").text()];
-      $("#output").text('');
+      inputArr = [$('#output').text()];
+      $('#output').text('');
       resetFlag = false;
-      //if "=" is followed by a number, reset input and output
+      // if "=" is followed by a number, reset input and output
     } else if (resetFlag) {
       inputArr = [];
       $("#output").text('');
       resetFlag = false;
     }
-    //normal expression button presses
+    // normal expression button presses
     inputArr.push(event.target.firstChild.nodeValue);
     inputArr = joinNums(inputArr);
     printInput(inputArr);
   });
 
-  //clears display on AC press
-  $("#AC").click(function () {
+  // clears display on AC press
+  $('#AC').click(function () {
     inputArr = [];
     printInput(inputArr);
-    $("#output").text('');
+    $('#output').text('');
   });
 
   //evaluates inputArr on '=' press
-  $("#equals").click(function () {
+  $('#equals').unbind('click');
+  $('#equals').on('click', function () {
+    console.log('clicked equals');
     var numRe = /\d/;
     var properDecimalsRe = /^\d*\.?\d+$/;
     inputArr = joinNums(inputArr);
-    for (i = 0; i < inputArr.length; i++) {
+    for (var i = 0; i < inputArr.length; i++) {
       if (numRe.test(inputArr[i]) && properDecimalsRe.test(inputArr[i])) {
         inputArr[i] = Number(inputArr[i]);
       }
-      //this is kind of hacky
-      //expressions with bad decimal use don't get converted to ints, and
-      //any valid non-int entry in inputArr must be one character long
+      // this is kind of hacky
+      // expressions with bad decimal use don't get converted to ints, and
+      // any valid non-int entry in inputArr must be one character long
       if (typeof inputArr[i] === 'string' && inputArr[i].length > 1) {
         $("#output").text("Error: token decimal.");
         return false;
       }
 
-      //check for missing operators next to parenthesis
+      // check for missing operators next to parenthesis
       if (inputArr[i] === '(' && numRe.test(inputArr[i - 1]) || inputArr[i] === ')' && numRe.test(inputArr[i + 1])) {
         $("#output").text("No implicit multiplcation via parenthesis.");
         return false;
       }
     }
+    console.log('about to calculate');
     var result = calculate(inputArr);
+    console.log(result + '< thats the result');
     $("#output").text(result);
+    console.log(document.querySelector('#output'));
     resetFlag = true;
   });
 
-  //joins adjacent numbers and decimals into single strings
+  // joins adjacent numbers and decimals into single strings
   function joinNums(arr) {
     var newArr = arr;
     var recursionFlag = false;
@@ -102,9 +105,9 @@ $(document).ready(function () {
     return newArr;
   }
 
-  //function organizes an array with parenthesis into a nested array
+  // function organizes an array with parenthesis into a nested array
   function calculate(arr) {
-    //check if parenthesis match
+    // check if parenthesis match
     var lParCount = 0;
     var rParCount = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -117,17 +120,17 @@ $(document).ready(function () {
     if (rParCount !== lParCount) {
       return 'Error: mismatched parenthesis.';
     }
-    //finds first instance of ( ... ) without inner parenthesis,
-    //then elevates the contents of those parenthesis to a new array,
-    //and restarts the search
-    for (i = 0; i < arr.length; i++) {
-      if (arr[i] === '(') {
-        for (var j = i + 1; j < arr.length; j++) {
+    // finds first instance of ( ... ) without inner parenthesis,
+    // then elevates the contents of those parenthesis to a new array,
+    // and restarts the search
+    for (var _i = 0; _i < arr.length; _i++) {
+      if (arr[_i] === '(') {
+        for (var j = _i + 1; j < arr.length; j++) {
           if (arr[j] === '(') {
             break;
           } else if (arr[j] === ')') {
-            var before = arr.slice(0, i);
-            var result = pemdas(arr.slice(i + 1, j));
+            var before = arr.slice(0, _i);
+            var result = pemdas(arr.slice(_i + 1, j));
             var after = arr.slice(j + 1);
             arr = before.concat(result).concat(after);
             return calculate(arr);
@@ -135,6 +138,8 @@ $(document).ready(function () {
         }
       }
     }
+    console.log('about to return calculate func');
+    console.log(pemdas(arr));
     return pemdas(arr);
   }
 
@@ -225,9 +230,11 @@ $(document).ready(function () {
   }
 
   function pemdas(arr) {
-    arr = parseExponents(arr);
-    arr = parseMultDiv(arr);
-    arr = parseAddSub(arr);
-    return arr;
+    var answer = arr;
+    answer = parseExponents(answer);
+    answer = parseMultDiv(answer);
+    answer = parseAddSub(answer);
+    console.log('done pemdasing');
+    return answer;
   }
 });
