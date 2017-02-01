@@ -144,7 +144,7 @@ body, h2 {
 .card-2 {
   opacity: 0;
   animation: slideInRight 1s linear;
-  animation-delay: 5.1s;
+  animation-delay: 4.9s;
   left: 475px;
 }
 
@@ -152,7 +152,7 @@ body, h2 {
   opacity: 0;
   top:351px;
   animation: slideInLeft 1s linear;
-  animation-delay: 5.1s;
+  animation-delay: 4.9s;
 }
 
 .card-4 {
@@ -160,7 +160,7 @@ body, h2 {
   left: 475px;
   top: 351px;
   animation: fadeIn 1s ease-in;
-  animation-delay: 9.1s;
+  animation-delay: 8.9s;
 }
 
 @keyframes slideInRight {
