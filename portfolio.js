@@ -6,11 +6,10 @@ function main() {
   function resizeResponse() {
     width = window.innerWidth;
 
-    // Move photo in about section next to header
-    if (width < 800) {
-      headWrapper.appendChild(headshot);
-    } else {
-      aboutMain.appendChild(headshot);
+    // Adjust about section
+    if (width < 721) {
+      card3.appendChild(img);
+      card2.remove();
     }
 
     // Collapse skills into one column
@@ -78,9 +77,41 @@ function main() {
     window.scrollTo(0, sectionHeight * 3);
   });
 
-  var headshot = document.getElementById('headshot');
-  var headWrapper = document.getElementById('about-head-wrapper');
-  var aboutMain = document.getElementById('about-main');
+  var card1 = document.querySelector('.card-1');
+  var card2 = document.querySelector('.card-2');
+  var card3 = document.querySelector('.card-3');
+  var card4 = document.querySelector('.card-4');
+  var elip = document.querySelector('.about-ellipses');
+  var img = document.querySelector('.about-main-img');
+  if (width >= 720) {
+    setTimeout(function () {
+      elip.innerText += '.';
+      setTimeout(function () {
+        elip.innerText += '.';
+        setTimeout(function () {
+          elip.innerText += '.';
+          setTimeout(function () {
+            card2.style.opacity = 1;
+            card3.style.opacity = 1;
+            elip.innerText = '';
+            setTimeout(function () {
+              card2.style.borderLeft = '1px none black';
+              card3.style.borderTop = '1px none black';
+              card1.style.borderRight = '1px none black';
+              card1.style.borderBottom = '1px none black';
+            }, 900);
+            setTimeout(function () {
+              card4.style.opacity = 1;
+              card2.style.borderBottom = '1px none black';
+              card3.style.borderRight = '1px none black';
+              card4.style.borderLeft = '1px none black';
+              card4.style.borderTop = '1px none black';
+            }, 4000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    }, 2000);
+  }
 
   var skills1 = document.getElementById('skills1');
   var column2Children = document.getElementById('skills2').children;
