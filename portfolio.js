@@ -77,6 +77,7 @@ function main() {
     window.scrollTo(0, sectionHeight * 3);
   });
 
+  // About screen animations
   var card1 = document.querySelector('.card-1');
   var card2 = document.querySelector('.card-2');
   var card3 = document.querySelector('.card-3');
@@ -95,17 +96,17 @@ function main() {
             card3.style.opacity = 1;
             elip.innerText = '';
             setTimeout(function () {
-              card2.style.borderLeft = '1px none black';
-              card3.style.borderTop = '1px none black';
-              card1.style.borderRight = '1px none black';
-              card1.style.borderBottom = '1px none black';
+              /*  card2.style.borderLeft = '1px none black';
+                card3.style.borderTop = '1px none black';
+                card1.style.borderRight = '1px none black';
+                card1.style.borderBottom = '1px none black'; */
             }, 900);
             setTimeout(function () {
-              card4.style.opacity = 1;
-              card2.style.borderBottom = '1px none black';
-              card3.style.borderRight = '1px none black';
-              card4.style.borderLeft = '1px none black';
-              card4.style.borderTop = '1px none black';
+              card4.style.opacity = 1; /*
+                                       card2.style.borderBottom = '1px none black';
+                                       card3.style.borderRight = '1px none black';
+                                       card4.style.borderLeft = '1px none black';
+                                       card4.style.borderTop = '1px none black'; */
             }, 4000);
           }, 1000);
         }, 1000);
@@ -120,6 +121,8 @@ function main() {
   var skillsWrapper = document.getElementById('skills-wrapper');
 
   resizeResponse();
+
+  /*** Carousel ***/
 
   var AUTOSCROLL = false; // Change to true to enable autoscrolling
   var PERIOD = 5000; // Time spent on each slide in milliseconds
