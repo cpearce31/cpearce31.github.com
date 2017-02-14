@@ -48,12 +48,14 @@ function main() {
 
   // Set height of each section to the full height of the viewport
   // unless on a small device in portrait mode
+
+  /*
   if (sectionHeight < 500 && width > height) {
     sectionHeight = sectionHeight * 2;
   }
-  for (var i = 0; i < sections.length; i++) {
+  for (let i = 0; i < sections.length; i++) {
     sections[i].style.height = sectionHeight + 'px';
-  }
+  } */
 
   var aboutLink = document.getElementById('nav-about');
   var skillsLink = document.getElementById('nav-skills');
@@ -140,7 +142,7 @@ function main() {
   var wrapper = document.querySelector('#carousel-wrapper');
 
   // Add bullets to the scoll indicator section for each slide
-  for (var _i2 = 0; _i2 < slides.length; _i2++) {
+  for (var i = 0; i < slides.length; i++) {
     var pip = document.createElement('i');
     pip.className = 'carousel-pip fa fa-square';
     pip.toggle = function () {
@@ -240,8 +242,8 @@ function main() {
   var navs = document.querySelectorAll('.navbar-btn');
 
   function navReset() {
-    for (var _i3 = 0; _i3 < navs.length; _i3++) {
-      navs[_i3].className = 'navbar-btn';
+    for (var _i2 = 0; _i2 < navs.length; _i2++) {
+      navs[_i2].className = 'navbar-btn';
     }
   }
 

@@ -3,7 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <script src="https://use.fontawesome.com/f701816877.js"></script>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="normalize.css" rel="stylesheet" type="text/css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -16,8 +17,8 @@
     <nav class="navbar">
       <ul class="navbar-list">
         <li class="navbar-btn navbar-btn-active"><a class="navbar-link" id="nav-about" href="#">ABOUT</a></li>
-        <li class="navbar-btn"><a class="navbar-link" id="nav-skills" href="#skills">SKILLS</a></li>
-        <li class="navbar-btn"><a class="navbar-link" id="nav-projects" href="#projects">PROJECTS</a></li>
+        <li class="navbar-btn"><a class="navbar-link" id="nav-projects" href="#PROJECTS">PROJECTS</a></li>
+        <li class="navbar-btn"><a class="navbar-link" id="nav-skills" href="#SKILLS">SKILLS</a></li>
         <li class="navbar-btn"><a class="navbar-link" id="nav-contact" href="#contact">CONTACT</a></li>
       </ul>
     </nav>
@@ -40,59 +41,11 @@
           </div>
         </div>
     </div>
-    <div class="section skills">
-      <div class="skills-wrapper" id="skills-wrapper">
-        <ul class="skills-list col1" id="skills1">
-          <li class="skill">
-            <i class="skill-icon devicon-html5-plain"></i>
-            <span class="skill-text">HTML 5</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-css3-plain"></i>
-            <span class="skill-text">CSS</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-javascript-plain"></i>
-            <span class="skill-text">Javascript</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-bootstrap-plain"></i>
-            <span class="skill-text">Bootstrap</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-atom-plain"></i>
-            <span class="skill-text">Atom</span>
-          </li>
-        </ul>
-        <ul class="skills-list col2" id="skills2">
-          <li class="skill">
-            <i class="skill-icon devicon-react-original" aria-hidden="true"></i>
-            <span class="skill-text">React.js</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-jquery-plain"></i>
-            <span class="skill-text">JQuery</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-git-plain"></i>
-            <span class="skill-text">Git</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-python-plain"></i>
-            <span class="skill-text">Python</span>
-          </li>
-          <li class="skill">
-            <i class="skill-icon devicon-gulp-plain"></i>
-            <span class="skill-text">Gulp</span>
-          </li>
-        </ul>
-      </div>
-    </div>
     <div class="section projects" id="projects">
       <div class="carousel-container">
         <div class="carousel-outer-wrapper">
           <button type="button" id="carousel-btn-left" class="carousel-btn">
-            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
           </button>
           <div class="carousel-inner-wrapper" id="carousel-wrapper">
             <div class="carousel-slide carousel-slide-active" id="carousel-slide-1">
@@ -173,11 +126,59 @@
             </div>
           </div>
             <button type="button" id="carousel-btn-right" class="carousel-btn">
-              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
             </button>
           </div>
         <div class="carousel-scroll-indicator" id="carousel-scroll-indicator">
         </div>
+      </div>
+    </div>
+    <div class="section skills">
+      <div class="skills-wrapper" id="skills-wrapper">
+        <ul class="skills-list col1" id="skills1">
+          <li class="skill">
+            <i class="skill-icon devicon-html5-plain"></i>
+            <span class="skill-text">HTML 5</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-css3-plain"></i>
+            <span class="skill-text">CSS</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-javascript-plain"></i>
+            <span class="skill-text">Javascript</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-bootstrap-plain"></i>
+            <span class="skill-text">Bootstrap</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-atom-plain"></i>
+            <span class="skill-text">Atom</span>
+          </li>
+        </ul>
+        <ul class="skills-list col2" id="skills2">
+          <li class="skill">
+            <i class="skill-icon devicon-react-original" aria-hidden="true"></i>
+            <span class="skill-text">React.js</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-jquery-plain"></i>
+            <span class="skill-text">JQuery</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-git-plain"></i>
+            <span class="skill-text">Git</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-python-plain"></i>
+            <span class="skill-text">Python</span>
+          </li>
+          <li class="skill">
+            <i class="skill-icon devicon-gulp-plain"></i>
+            <span class="skill-text">Gulp</span>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="section contact" id="contact">
@@ -188,7 +189,6 @@
         <input class="form-submit" id="submit" type="submit" value="Send Message" />
       </form>
       <div class="contact-links">
-        <a href="https://facebook.com/calebpearce"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
         <a href="https://github.com/cpearce31"><i class="fa fa-github" aria-hidden="true"></i></a>
         <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         <a href="https://www.freecodecamp.com/cpearce31"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
