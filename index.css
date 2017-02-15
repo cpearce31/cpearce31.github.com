@@ -1,8 +1,9 @@
 /*
 
   Main Color: #0c9
+  Accent:     #53D9B7
   Background: #e2e2e2
-  Accent:     #f47d42
+  Highlight:  #FF9E00
   Outline:    #808080
 
 */
@@ -11,11 +12,13 @@
 /******* General Styles *******/
 
 body {
-  overflow-x: hidden
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .container {
   font-family: "Roboto", sans-serif;
+  background-color: #e2e2e2;
 }
 
 .section {
@@ -59,7 +62,7 @@ body {
 }
 
 .navbar-link:hover{
-  color: #f47d42;
+  color: #FF9E00;
 }
 
 .navbar-link, .navbar-link:visited {
@@ -107,8 +110,68 @@ body {
 /******* About Section *******/
 
 .about {
-  background-color: #e2e2e2;
+  margin: 50px auto 0 auto;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 850px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 1000px;
+  padding: 30px 0;
 }
+
+.about-wrapper {
+  perspective: 1000px;
+}
+
+.about-wrapper:hover .about-card, .about-wrapper.flipped .about-card {
+  transform: rotateY(180deg);
+}
+
+.about-wrapper{
+  width: 400px;
+  height: 350px;
+}
+
+.about-card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-front, .card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  width: 370px;
+  height: 320px;
+}
+
+.card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: #53D9B7;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #fff;
+}
+
+.about-card-header {
+  font-size: 4em;
+}
+
+
 
 /******* Projects Section *******/
 
@@ -179,7 +242,7 @@ body {
 }
 
 .carousel-btn:hover {
-  color: #f47d42;
+  color: #FF9E00;
 }
 
 .carousel-slide-text-wrapper {
@@ -204,7 +267,7 @@ body {
 }
 
 .carousel-pip-active {
-  color: #f47d42;
+  color: #FF9E00;
   font-size: 1.5em;
   line-height: 66%;
 }
@@ -489,7 +552,7 @@ body {
 }
 
 .form-field:focus{
-  border: 3px solid #f47d42;
+  border: 3px solid #FF9E00;
   margin: 12px -3px;
 }
 
@@ -508,14 +571,14 @@ body {
   height: 40px;
   border: none;
   outline: none;
-  background-color: #f47d42;
+  background-color: #FF9E00;
   color: white;
   font-size: 1.15em;
 }
 
 .form-submit:hover {
   background-color: white;
-  color: #f47d42;
+  color: #FF9E00;
 }
 
 .contact-links {
@@ -528,7 +591,7 @@ body {
 }
 
 .contact-links > a:hover {
-  color: #f47d42;
+  color: #FF9E00;
 }
 
 /* Contact Media Queries */
