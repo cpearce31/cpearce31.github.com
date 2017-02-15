@@ -113,10 +113,10 @@ body {
   margin: 50px auto 0 auto;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 850px;
+  height: 700px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 950px;
   padding: 30px 0;
 }
 
@@ -130,7 +130,7 @@ body {
 
 .about-wrapper{
   width: 400px;
-  height: 350px;
+  height: 320px;
 }
 
 .about-card {
@@ -152,8 +152,8 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
-  width: 370px;
-  height: 320px;
+  width: 360px;
+  height: 280px;
 }
 
 .card-front {
@@ -171,7 +171,123 @@ body {
   font-size: 4em;
 }
 
+.about-img {
+  max-height: 300px;
+  height: auto;
+  width: auto;
+}
 
+/* About Media Queries */
+
+@media (max-width: 950px), (max-height: 800px) {
+
+  .about {
+    width: 700px;
+    height: 600px;
+  }
+
+  .about-wrapper {
+    width: 300px;
+    height: 250px;
+  }
+
+  .card-front, .card-back {
+    padding: 10px;
+    width: 280px;
+    height: 230px;
+  }
+
+  .about-img {
+    max-height: 210px;
+  }
+
+  .card-back p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .about {
+    height: 550px;
+    width: 350px;
+  }
+
+  .about-wrapper {
+    width: 350px;
+    height: 120px;
+  }
+
+  .card-front, .card-back {
+    width: 330px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .card1 {
+    height: 100px;
+  }
+
+  .card1 .card-front, .card1 .card-back {
+    height: 80px;
+  }
+
+  .card3 {
+    display: none;
+  }
+
+  .card4 {
+    height: 230px;
+  }
+
+  .card4 .card-front, .card4 .card-back {
+    height: 210px;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  .about {
+    margin-top: 30px;
+    height: 500px;
+    width: 290px;
+  }
+
+  .about-wrapper {
+    width: 290px;
+    height: 80px;
+    margin: 0;
+  }
+
+  .card-front, .card-back {
+    width: 270px;
+    height: 60px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .card2 .card-back {
+    margin-top: 10px;
+    background: #0c9;
+    color: white;
+    font-size: .8em;
+  }
+
+  .card3 {
+    display: none;
+  }
+
+  .card4 {
+    height: 230px;
+  }
+
+  .card4 .card-front, .card4 .card-back {
+    height: 210px;
+    padding: 10px;
+  }
+}
 
 /******* Projects Section *******/
 
@@ -274,7 +390,7 @@ body {
 
 /* Projects Media Queries */
 
-@media (max-width: 1060px) {
+@media (max-width: 1060px), (max-height: 850px) {
 
   .projects {
     height: 750px;

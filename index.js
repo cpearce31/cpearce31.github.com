@@ -11,12 +11,11 @@ window.onload = function () {
   var about = document.querySelector('.about');
   var projects = document.querySelector('.projects');
   var skills = document.querySelector('.skills');
+  var cards = document.querySelectorAll('.about-wrapper');
 
   var projectsY = Number(window.getComputedStyle(about).height.slice(0, -2));
   var skillsY = projectsY + Number(window.getComputedStyle(projects).height.slice(0, -2));
   var contactY = skillsY + Number(window.getComputedStyle(skills).height.slice(0, -2));
-
-  console.log(skillsY);
 
   aboutLink.addEventListener('click', function () {
     event.preventDefault();
@@ -71,35 +70,53 @@ window.onload = function () {
     var width = window.innerWidth;
     var height = window.innerHeight;
 
+    if (width <= 700 && height > width) {
+      for (var i = 0; i < cards.length; i++) {
+        if (!cards[i].classList.contains('flipped')) {
+          cards[i].classList.toggle('flipped');
+        }
+      }
+    }
+
     // Collapse skills into one column
     if (width <= 900 && height > width) {
-      for (var i = 0; i < childrenArr.length; i++) {
-        skills1.appendChild(childrenArr[i]);
+      for (var _i = 0; _i < childrenArr.length; _i++) {
+        skills1.appendChild(childrenArr[_i]);
       }
       if (skills2) {
         skills2.remove();
       }
     } else {
       skillsWrapper.appendChild(skills2);
-      for (var _i = 0; _i < childrenArr.length; _i++) {
-        skills2.appendChild(childrenArr[_i]);
+      for (var _i2 = 0; _i2 < childrenArr.length; _i2++) {
+        skills2.appendChild(childrenArr[_i2]);
       }
     }
   }
 
   resizeResponse();
 
+  window.addEventListener('resize', resizeThrottler, false);
+
+  var resizeTimeout = void 0;
+  function resizeThrottler() {
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(function () {
+        resizeTimeout = null;
+        resizeResponse();
+      }, 66);
+    }
+  }
+
   // About Card functionality //
 
   var card1 = document.querySelector('#card1');
-  console.log(card1.classList);
   setTimeout(function () {
     if (!card1.classList.contains('flipped')) {
       card1.classList.toggle('flipped');
     }
   }, 500);
 
-  var cards = document.querySelectorAll('.about-wrapper');
   for (var i = 1; i < cards.length; i++) {
     cards[i].addEventListener('mouseover', function (e) {
       var classes = e.target.classList;
@@ -125,7 +142,7 @@ window.onload = function () {
   var wrapper = document.querySelector('#carousel-wrapper');
 
   // Add bullets to the scoll indicator section for each slide
-  for (var _i2 = 0; _i2 < slides.length; _i2++) {
+  for (var _i3 = 0; _i3 < slides.length; _i3++) {
     var pip = document.createElement('i');
     pip.className = 'carousel-pip fa fa-square';
     pip.toggle = function () {
