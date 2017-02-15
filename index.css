@@ -177,6 +177,22 @@ body {
   width: auto;
 }
 
+.fa-mouse-pointer {
+  color: #fff;
+  font-size: 1.3em;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5)
+  }
+}
+
 /* About Media Queries */
 
 @media (max-width: 950px), (max-height: 800px) {
@@ -588,10 +604,6 @@ body {
   text-align: center;
   -ms-flex-positive: 2;
   flex-grow: 2;
-}
-
-.skill:hover {
-  box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.4);
 }
 
 .skill-icon {
