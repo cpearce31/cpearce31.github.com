@@ -53,7 +53,6 @@ $(document).ready(function () {
   });
 
   //evaluates inputArr on '=' press
-  $('#equals').unbind('click');
   $('#equals').on('click', function () {
     console.log('clicked equals');
     var numRe = /\d/;
