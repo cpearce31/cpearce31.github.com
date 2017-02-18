@@ -10,7 +10,6 @@ window.onload = function () {
 
   //  formats and displays the current expression to be evaluated
   function printInput(input) {
-    console.log(input);
     var re = /[\d|.]/;
     var str = '';
 
@@ -24,7 +23,6 @@ window.onload = function () {
         str += input[i] + ' ';
       }
     }
-    console.log();
     inputDisplay.textContent = str;
   }
 
@@ -33,11 +31,9 @@ window.onload = function () {
 
   // displays and stores operators and numbers when their button is pressed
   var btnPress = function btnPress(e) {
-    console.log('handler fired');
     // handles entries that follow a "=" press
     var opRe = /[/*+\-^]/;
     var pressed = e.target.textContent;
-    console.log(pressed);
     // if "=" is followed by an operator, apply it to the previous output
     if (resetFlag && opRe.test(pressed)) {
       inputArr = [output.textContent];
@@ -52,7 +48,6 @@ window.onload = function () {
     // normal expression button presses
     inputArr.push(event.target.firstChild.nodeValue);
     inputArr = joinNums(inputArr);
-    console.log(inputArr);
     printInput(inputArr);
   };
 
@@ -69,7 +64,6 @@ window.onload = function () {
 
   //evaluates inputArr on '=' press
   equals.addEventListener('click', function () {
-    console.log('clicked equals');
     var numRe = /\d/;
     var properDecimalsRe = /^\d*\.?\d+$/;
     inputArr = joinNums(inputArr);
@@ -91,11 +85,8 @@ window.onload = function () {
         return false;
       }
     }
-    console.log('about to calculate');
     var result = calculate(inputArr);
-    console.log(result + '< thats the result');
     output.textContent = result;
-    console.log(document.querySelector('#output'));
     resetFlag = true;
   });
 
@@ -248,7 +239,6 @@ window.onload = function () {
     answer = parseExponents(answer);
     answer = parseMultDiv(answer);
     answer = parseAddSub(answer);
-    console.log('done pemdasing');
     return answer;
   }
 };

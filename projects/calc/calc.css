@@ -85,6 +85,10 @@ body {
     height: 100px;
   }
 
+  .screen {
+    height: 50px;
+  }
+
   .btn {
     width: 80px;
     height: 45px;
