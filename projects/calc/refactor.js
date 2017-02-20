@@ -2,6 +2,7 @@
 
 window.onload = function () {
 
+  var keysPressed = 0;
   var inputDisplay = document.querySelector('#input');
   var expressions = document.querySelectorAll('.expression');
   var output = document.querySelector('#output');
@@ -31,6 +32,8 @@ window.onload = function () {
 
   // displays and stores operators and numbers when their button is pressed
   var btnPress = function btnPress(e) {
+    keysPressed++;
+    console.log(keysPressed);
     // handles entries that follow a "=" press
     var opRe = /[/*+\-^]/;
     var pressed = e.target.textContent;

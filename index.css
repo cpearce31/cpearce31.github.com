@@ -552,9 +552,15 @@ body {
   }
 
   .carousel-btn {
-    margin: 5px;
+    margin: 15px;
     font-size: 1.6em;
     padding: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel-btn {
+    margin: 5px;
   }
 }
 
