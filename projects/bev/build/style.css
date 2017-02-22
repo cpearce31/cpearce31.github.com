@@ -1,0 +1,396 @@
+/*
+  main: #00CD2D
+  background: #F7D55D
+  accent: #00CD2D
+  accent2: #E8FAAB
+*/
+
+.container {
+  background-color: #F7D55D;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.inner-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.bar-search-wrapper {
+  background-color: #00CD2D;
+  height: 500px;
+}
+
+.search-wrapper {
+  margin: 0;
+  width: 600px;
+  height: 500px;
+  float:right;
+}
+
+.bar {
+  margin: 0;
+  float:left;
+  background-color: #f7ee5d;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px;
+  height: calc(100% - 40px);
+  width: calc(400px - 40px);
+}
+
+.bar-ingredient:hover {
+  background-color: #94EF00;
+}
+
+.suggestion {
+  border: 1px solid #7e7e7e;
+  margin: 10px;
+  padding: 10px;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-header {
+  font-family: 'Pacifico';
+  text-align: center;
+  font-size: 4em;
+  color: white;
+}
+
+.search-text {
+  margin: 20px 40px;
+  color: white;
+}
+
+.search-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 40px;
+}
+
+.search-box, .btn-browse {
+  width: 220px;
+  outline: none;
+  border: 1px solid #888;
+  height: 30px;
+  background-color: #fff;
+}
+
+.search-box {
+  padding: 0 10px;
+}
+
+.btn-browse {
+  display: inline-block;
+}
+
+.results-box {
+  margin: 0 40px;
+  background-color: #fff;
+  border: 1px solid #888;
+  padding: 5px 10px;
+}
+
+.results-box:empty {
+  display: none;
+}
+
+.result {
+  line-height: 1.5;
+}
+
+.result:hover {
+  background-color: #FFFC66;
+}
+
+.btn-add {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #00CD2D;
+  border-radius: 3px;
+}
+
+.result span {
+  display: inline-block;
+  width: 40%;
+  margin: 0;
+}
+
+.result-descript {
+  text-align: right;
+  color: #888;
+}
+
+.btn-offset {
+  width: 20%;
+  margin: 0;
+  display: inline-block;
+  text-align: right;
+}
+
+.bar-header {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid black;
+}
+
+.suggestions-box {
+}
+
+.suggestion {
+  background-color: #fff;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.bar-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.bar-list p {
+  color: #888;
+}
+
+.bar-ingredient {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3px;
+  font-size: 1.3em;
+}
+
+.btn-close {
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background: #ff0000;
+  color: #fff;
+  padding: 0;
+  height: 18px;
+  width: 18px;
+  min-width: 18px;
+  text-align: center;
+  float: right;
+}
+
+.drinks {
+  background-color: #94EF00;
+  overflow: hidden;
+}
+
+.drinks h2 {
+  border-bottom: 1px solid black;
+  margin: 20px;
+}
+
+.drinks-section {
+  min-height: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.drink {
+  height: 190px;
+  width: calc(25% - 42px);
+  margin: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #FFFC66;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.drink:hover {
+  box-shadow: inset 0 0 40px 10px #00CD2D;
+}
+
+.modal {
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  background-color: #00CD2D;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.modal h3 {
+  font-size: 1.5em;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modal-all-ingredients {
+  max-width: 500px;
+  width: 500px;
+  height: 80%;
+  overflow-y: scroll;
+  background-color: #94EF00;
+}
+
+@media (max-width: 1100px) {
+
+  .inner-wrapper {
+    width: 700px;
+  }
+
+  .bar {
+    width: 260px;
+  }
+
+  .search-wrapper {
+    width: 400px;
+  }
+
+  .suggestions-box {
+    display: none;
+  }
+
+  .search-box, .btn-browse {
+    width: 140px;
+    height: 60px;
+  }
+
+  .search-form span {
+    display: none;
+  }
+
+  .drink {
+    font-size: .9em;
+  }
+
+  .result {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .inner-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bar-search-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+
+  .bar, .search-wrapper {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .search-wrapper {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .bar-header, .bar p, .bar-ingredient {
+    margin: 10px;
+  }
+
+  .bar {
+    height: 400px;
+  }
+
+  .search-form {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .search-form span {
+    display: inline;
+    padding: 10px;
+  }
+
+  .search-box, .btn-browse {
+    height: 30px;
+    width: 250px;
+  }
+
+  .drinks-section {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .drink {
+    width: 80%;
+    height: 80px;
+  }
+
+  .drink h3, .drink h4, .drink p {
+    padding: 5px;
+    margin: 0;
+    font-size: .9em;
+  }
+
+  .search-header {
+    font-size: 2em;
+  }
+
+  .search-text {
+    font-size: 1em;
+  }
+
+  .drinks h2, .bar h2 {
+    font-size: 1.3em;
+  }
+
+  .modal {
+    width: 250px;
+  }
+
+}
