@@ -3631,8 +3631,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           }
         }
       } }, { key: "openModal", value: function value(e, t) {
-        if (console.log(t), "btn-add" !== t.className && "btn-close" !== t.className) if ("drink" === e) {
-          "result" !== t.className, t = t.parentNode, console.log(t);for (var n = 0; n < p.default.drinks.length; n++) {
+        if ("btn-add" !== t.className && "btn-close" !== t.className) if ("drink" === e) {
+          "result" !== t.className && "drink" !== t.className && (t = t.parentNode);for (var n = 0; n < p.default.drinks.length; n++) {
             p.default.drinks[n].name === t.dataset.name && this.setState({ drinkModalOpen: !0, drinkModalName: p.default.drinks[n].name, drinkModalAmounts: p.default.drinks[n].amounts, drinkModalProcedure: p.default.drinks[n].procedure });
           }
         } else if ("ingredient" === e) {
@@ -4153,8 +4153,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       v = n(56),
       y = (n(21), n(13), "mixins"),
       b = [],
-      w = { mixins: "DEFINE_MANY", statics: "DEFINE_MANY",
-    propTypes: "DEFINE_MANY", contextTypes: "DEFINE_MANY", childContextTypes: "DEFINE_MANY", getDefaultProps: "DEFINE_MANY_MERGED", getInitialState: "DEFINE_MANY_MERGED", getChildContext: "DEFINE_MANY_MERGED", render: "DEFINE_ONCE", componentWillMount: "DEFINE_MANY", componentDidMount: "DEFINE_MANY", componentWillReceiveProps: "DEFINE_MANY", shouldComponentUpdate: "DEFINE_ONCE", componentWillUpdate: "DEFINE_MANY", componentDidUpdate: "DEFINE_MANY", componentWillUnmount: "DEFINE_MANY", updateComponent: "OVERRIDE_BASE" },
+      w = { mixins: "DEFINE_MANY", statics: "DEFINE_MANY", propTypes: "DEFINE_MANY",
+    contextTypes: "DEFINE_MANY", childContextTypes: "DEFINE_MANY", getDefaultProps: "DEFINE_MANY_MERGED", getInitialState: "DEFINE_MANY_MERGED", getChildContext: "DEFINE_MANY_MERGED", render: "DEFINE_ONCE", componentWillMount: "DEFINE_MANY", componentDidMount: "DEFINE_MANY", componentWillReceiveProps: "DEFINE_MANY", shouldComponentUpdate: "DEFINE_ONCE", componentWillUpdate: "DEFINE_MANY", componentDidUpdate: "DEFINE_MANY", componentWillUnmount: "DEFINE_MANY", updateComponent: "OVERRIDE_BASE" },
       _ = { displayName: function displayName(e, t) {
       e.displayName = t;
     }, mixins: function mixins(e, t) {
@@ -4390,4 +4390,4 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   var o = n(r),
       i = o;e.exports = i;
 }]));
-//# sourceMappingURL=main.c8edce91.js.map
+//# sourceMappingURL=main.f0a4c888.js.map
