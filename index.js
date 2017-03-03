@@ -42,6 +42,8 @@ window.onload = function () {
     }
   }
 
+  // Highlight section of navbar based on scroll height //
+
   window.addEventListener('scroll', function () {
     var y = document.body.scrollTop;
     if (y < projectsY - 200) {
@@ -59,7 +61,7 @@ window.onload = function () {
     }
   });
 
-  // Resize Handler //
+  // Resize handler //
 
   var skills1 = document.getElementById('skills1');
   var skills2 = document.getElementById('skills2');
@@ -98,6 +100,8 @@ window.onload = function () {
 
   window.addEventListener('resize', resizeThrottler, false);
 
+  // Throttle resizing //
+
   var resizeTimeout = void 0;
   function resizeThrottler() {
     if (!resizeTimeout) {
@@ -108,7 +112,7 @@ window.onload = function () {
     }
   }
 
-  // About Card functionality //
+  // About card functionality //
 
   var card1 = document.querySelector('#card1');
   setTimeout(function () {
@@ -118,9 +122,10 @@ window.onload = function () {
   }, 500);
 
   for (var i = 1; i < cards.length; i++) {
-    cards[i].addEventListener('mouseover', function (e) {
+    cards[i].addEventListener('mouseenter', function (e) {
       var classes = e.target.classList;
       classes.contains('flipped') ? null : classes.toggle('flipped');
+      console.log('flipped');
     });
   }
 
